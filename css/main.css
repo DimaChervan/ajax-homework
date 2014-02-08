@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 13px Helvetica, arial, freesans, clean, sans-serif;
+}
+.header {
+    background-image: linear-gradient(#f9f9f9, #f3f3f3);
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    width: 100%;
+}
+.search-block {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    padding: 5px 0;
+    text-align: center;
+}
+.img {
+    width: 28px;
+    height: 32px;
+    background: url(../img/icon-github.png) -5px -4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.search-block input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fcfcfc;
+    padding: 4px 20px 4px 8px;
+    margin: 0 10px 0 10px;
+    text-overflow: ellipsis;
+    width: 166px;
+}
+
+.wait {
+    width: 32px;
+    height: 32px;
+    background: url(../img/octocat.gif) no-repeat;
+    display: inline-block;
+}
+
+.send {
+    width: 32px;
+    height: 30px;
+    display: inline-block;
+    background: url(../img/arrow1.png) 0 -38px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.send:hover {
+    background-position: 0 -6px;;
+}
+
+.social {
+    padding: 53px 0 10px 0;
+    height: 130px;
+    margin: 0 auto;
+    width: 340px;
+    display: block;
+}
+
+.content-wrap {
+    padding-top: 5px;
+    text-align: center;
+}
+
+.left-path {
+    display: inline-block;
+}
+
+.right-path {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    text-align: left;
+}
+
+.avatar {
+    width: 220px;
+    margin-right: 5px;
+    border-radius: 5px;
+    height: 220px;
+}
+
+.info-user-wrap {
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+.info-user {
+    width: 220px;
+    display: inline-block;
+}
+
+.user-section {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.user-name {
+    font-size: 20px;
+    color: #666;
+}
+
+.user-section span:first-child{
+    width: 23px;
+    height: 20px;
+    display: inline-block;
+    background: url("../img/letter.png") -2px 0;
+    vertical-align: top;
+}
+
+.user-section a {
+    text-decoration: none;
+    color: #4183c4;
+}
+
+.user-section a:hover {
+    text-decoration: underline;
+}
+
+.user-join {
+    line-height: 15px;
+    padding-top: 2px;
+}
+
+.user-section.user-join .join-img {
+    width: 15px;
+    height: 15px;
+    background: url("../img/date.png") 1px 0;
+    margin: 0 7px 0 2px;
+}
+
+.user-follow {
+    text-align: center;
+}
+
+.follow {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.following {
+    display: inline-block;
+}
+
+.count {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text {
+    color: #999;
+}
+
+.table-head {
+    background-image: linear-gradient(#f9f9f9, #f3f3f3);
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+}
+
+.table-body {
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+}
+
+.table-body ul {
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+.table-body li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table-body a {
+    color: #4183c4;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-body ul li:last-child a {
+    border-bottom: 0;
+}
+
+.table-body a:hover {
+    text-decoration: underline;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.content {
+    padding-top: 5px;
+    text-align: left;
+}
+
+.error-message {
+    min-width: 200px;
+    position: absolute;
+    top: 53px;
+    color: red;
+    right: 10px;
+    text-align: center;
+    padding: 10px;
+    background: darksalmon;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(218, 45, 45, 0.5);
+    border: 1px solid chocolate;
+}

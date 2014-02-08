@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Git people</title>
+    <script src="js/lodash.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <script type="text/template" class="loDash-template-leftPath">
+        <div class="left-path">
+            <img alt="avatar" class="avatar" src="<%=it.avatar_url%>&s=440">
+            <div class="content">
+                <div class="info-user">
+                    <div class="user-section user-name"><%=it.login%></div>
+                    <div class="user-section">
+                        <span></span>
+                        <a href="mailto:<%=it.email%>"><%=it.email%></a>
+                    </div>
+                    <div class="user-section user-join">
+                        <span class="join-img"></span>
+                        <span>Joined on</span>
+                        <span><%=it.created_at%></span>
+                    </div>
+                    <div class="user-follow">
+                        <div class="follow">
+                            <div class="count"><%=it.followers%></div>
+                            <div class="text">follow</div>
+                        </div>
+                        <div class="following">
+                            <div class="count"><%=it.following%></div>
+                            <div class="text">following</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-path">
+            <div class="table-head">Repositories</div>
+            <div class="table-body">
+                <ul>
+                    <% for(var i=0; i<it.repos.length; i++) { %>
+                    <li>
+                        <a href=<%=it.repos[i].url%>><%=it.repos[i].name%></a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </script>
+
+    <div class="header">
+        <div class="search-block">
+            <span class="img"></span>
+            <input type="text" placeholder="Введите login пользователя">
+            <span class="send"></span>
+        </div>
+    </div>
+    <img alt="social-img" src="img/social.jpg" class="social">
+    <div class="content-wrap"></div>
+    <div class="error-message hide"></div>
+    <script src="js/ajax.js"></script>
+    <script>
+        var sendBtn = document.getElementsByClassName('send')[0];
+        var inputLogin = document.getElementsByTagName('input')[0];
+        sendBtn.addEventListener('click', function () {
+            getUserData(inputLogin.value);
+        });
+        inputLogin.addEventListener('keypress', function (e) {
+            var event = e || window.event;
+            if (event.keyCode == 13) {
+                getUserData(inputLogin.value);
+            }
+        });
+    </script>
+</body>
+</html>
