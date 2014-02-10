@@ -54,7 +54,7 @@ var getUserData = (function(){
             request = ajax.findUserInfo,
             separator = '///', loadEnd;
         function getUserData(responseObj){
-            var responseItem, date;
+            var responseItem, date, email;
             if (responseObj instanceof Array) {
                 infoObj.repos = [];
                 responseObj.forEach(function(item) {
@@ -78,7 +78,8 @@ var getUserData = (function(){
                 });
                 date = new Date(responseObj['created_at']).toDateString();
                 infoObj.created_at = date.slice(date.indexOf(' ') + 1, date.length);
-                infoObj.email.indexOf('Информация отсутствует') == 0 ? infoObj.email_url = '' : infoObj.email_url = ' href=mailto:' + infoObj.email;
+                email = infoObj.email;
+                email.indexOf('Информация отсутствует') == 0 ? infoObj.email_url = '' : infoObj.email_url = ' href=mailto:' + email;
             }
             logicLoaded ();
         }
