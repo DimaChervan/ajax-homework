@@ -28,16 +28,9 @@ body {
     border-radius: 3px;
     background: #fcfcfc;
     padding: 4px 20px 4px 8px;
-    margin: 0 10px 0 10px;
+    margin: 0 10px;
     text-overflow: ellipsis;
     width: 166px;
-}
-
-.wait {
-    width: 32px;
-    height: 32px;
-    background: url(../img/octocat.gif) no-repeat;
-    display: inline-block;
 }
 
 .send {
@@ -218,6 +211,6 @@ body {
     padding: 10px;
     background: darksalmon;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(218, 45, 45, 0.5);
+    box-shadow: 0 0 10px rgba(218, 45, 45, .5);
     border: 1px solid chocolate;
 }

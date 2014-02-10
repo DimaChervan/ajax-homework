@@ -48,7 +48,8 @@ var getUserData = (function(){
                 following : '1',
                 created_at : '1',
                 avatar_url : '1',
-                repos : '1'
+                repos : '1',
+                email_url : '1'
             },
             request = ajax.findUserInfo,
             separator = '///', loadEnd;
@@ -77,6 +78,7 @@ var getUserData = (function(){
                 });
                 date = new Date(responseObj['created_at']).toDateString();
                 infoObj.created_at = date.slice(date.indexOf(' ') + 1, date.length);
+                infoObj.email.indexOf('Информация отсутствует') == 0 ? infoObj.email_url = '' : infoObj.email_url = ' href=mailto:' + infoObj.email;
             }
             logicLoaded ();
         }
