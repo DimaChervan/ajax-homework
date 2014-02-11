@@ -60,20 +60,6 @@
     <div class="content-wrap"></div>
     <div class="error-message hide"></div>
     <script src="js/ajax.js"></script>
-    <script>
-	(function(){
-        var sendBtn = document.getElementsByClassName('send')[0];
-        var inputLogin = document.getElementsByTagName('input')[0];
-        sendBtn.addEventListener('click', function () {
-            getUserData(inputLogin.value);
-        });
-        inputLogin.addEventListener('keypress', function (e) {
-            var event = e || window.event;
-            if (event.keyCode == 13) {
-                getUserData(inputLogin.value);
-            }
-        });
-	})();
-    </script>
+    <script src="js/interface.js"></script>
 </body>
 </html>
