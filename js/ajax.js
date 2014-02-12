@@ -129,17 +129,17 @@ var getUserData = (function(){
     })();
 
     var cacheData = (function () {
-        var separator = '///';
-        (function () {
-            var storageItem,
-                time = Date.parse(new Date());
-            _.forEach(Object.keys(localStorage), function(item){
-                storageItem = localStorage[item];
-                if (storageItem.slice(storageItem.indexOf(separator) + separator.length, storageItem.length) <= time ) {
-                    localStorage.removeItem(item);
-                }
-            });
-        })();
+        var separator = '///',
+            time = Date.parse(new Date()),
+            storageItem;
+        _.forEach(Object.keys(localStorage), function(item){
+            storageItem = localStorage[item];
+            if (storageItem.slice(storageItem.indexOf(separator) + separator.length, storageItem.length) <= time ) {
+                localStorage.removeItem(item);
+            }
+        });
+        storageItem = undefined;
+        time = undefined;
 
         function searchCache (login) {
             if (localStorage[login]) {
