@@ -150,7 +150,7 @@ var getUserData = (function(){
         }
 
         function saveInCache (infoObj) {
-            localStorage.setItem(infoObj.login.toLowerCase(), JSON.stringify(infoObj) + separator + (Date.parse(new Date()) + 6 * 1000 * 60 * 24));
+            localStorage.setItem(infoObj.login.toLowerCase(), JSON.stringify(infoObj) + separator + (Date.parse(new Date()) + 60 * 1000 * 60 * 24));
         }
 
         return {
